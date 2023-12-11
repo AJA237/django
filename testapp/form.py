@@ -2,8 +2,8 @@ from django import forms
 from .models import UserModel
 
 # creating myy forms
-class UserForm(forms.Model):
+class UserForm(forms.ModelForm):
     class Meta:
         model = UserModel
-        field = __all__
+        fields ='__all__'
         

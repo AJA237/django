@@ -1,6 +1,6 @@
 from django.shortcuts import render, HttpResponse
-from django.view.generic import CreateView, ListView, DeleteView, UpdateView, TemplateView
-from .models import User
+# from django.view.generic import CreateView, ListView, DeleteView, UpdateView, TemplateView
+from .models import UserModel
 from .form import UserForm
 
 # Create your views here.
@@ -30,7 +30,7 @@ def save_user(request):
         age = request.POST.get('age')
         email = request.POST.get('email')
 
-        user = User(first_name=first_name, last_name=last_name, age=age, email=email)
+        user = UserModel(first_name=first_name, last_name=last_name, age=age, email=email)
         user.save()
 
         return HttpResponse('User saved successfully!')

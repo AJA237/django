@@ -1,6 +1,6 @@
 from django.urls import path
-import views
+from . import views
 
 urlpatterns = [
-    path("")
+    path("", views.save_user)
 ]
